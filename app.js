@@ -10,7 +10,7 @@ app.get("/", async (req, res) => {
     try {
         // Fetch top GitHub users (sorted by followers)
         const response = await axios.get(
-            "https://api.github.com/search/users?q=followers:>5000&sort=followers&order=desc&per_page=40"
+            "https://api.github.com/search/users?q=followers:>5000&sort=followers&order=desc&per_page=20"
         );
 
         const users = response.data.items;
